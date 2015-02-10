@@ -36,6 +36,7 @@ int main(int argc, const char * argv[]) {
     
     sparseVector* sV=new sparseVector(COL);
     sV->init();
+    multi(sparse, sV);
     
     return 0;
 }

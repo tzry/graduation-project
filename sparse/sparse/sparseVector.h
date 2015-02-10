@@ -6,18 +6,13 @@
 //  Copyright (c) 2015年 tzry. All rights reserved.
 //
 #include<stdlib.h>
-#include<thread>
-#include<mutex>
-
 #ifndef sparse_sparseVector_h
 #define sparse_sparseVector_h
 
 class sparseVector{
 private:
     int length;
-    double* ele;
-    std::mutex* m;
-public:
+    double* ele;public:
     int getLength(){
         return length;
     }
@@ -28,14 +23,11 @@ public:
     sparseVector(int l){
         length=l;
         ele=(double*)malloc(sizeof(double)*l);
-        m=(std::mutex*)malloc(sizeof(std::mutex)*l);
         double* now=ele;
-        std::mutex* nowm;
+        
         for(int i=0;i<l;i++){
             *now=0;
-            nowm=new std::mutex();
             now++;
-            nowm++;
         }
     }
     //随机初始化
@@ -49,7 +41,9 @@ public:
         }
     }
     
-    
+    void addEle(int pos,double value){
+        (*(ele+pos))+=value;
+    }
     
 };
 

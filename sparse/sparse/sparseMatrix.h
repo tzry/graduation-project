@@ -366,4 +366,40 @@ sparseMatrix* multi(sparseMatrix* a,sparseMatrix* b){
     return sparse(result);
 }
 
+
+
+
+//向量乘法线程工作函数
+void sparseVectorWorkFun(sparseMatrix* sM,sparseVector* sV,sparseVector* result,int row){
+    while(row<sV->getLength()){
+        
+        for(int i=sM->row.at(row);i<sM->row.at(row+1)&&sM->col.at(i)!=-1&&sM->ele.at(i)!=0;i++){
+            result->addEle(row, sM->ele.at(i)*sV->getValue(sM->col.at(i)));
+        }
+        
+        row+=THREADCOUNT;
+    }
+}
+
+
+//向量乘法
+sparseVector* multi(sparseMatrix* sM,sparseVector* sV){
+    sM->missionRow=0;
+    if(sM->getCol()!=sV->getLength()){
+        throw "cannot be multied";
+    }
+    sparseVector* result=new sparseVector(sM->getCol());
+    std::thread threads[THREADCOUNT];
+    for(int i=0;i<THREADCOUNT;i++){
+        threads[i]=std::thread(sparseVectorWorkFun,sM,sV,result,i);
+        
+    }
+    for(int i=0;i<THREADCOUNT;i++)
+    {
+        (threads[i]).join();
+    }
+    return result;
+}
+
+
 #endif
