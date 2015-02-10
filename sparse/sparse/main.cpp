@@ -28,9 +28,14 @@ int main(int argc, const char * argv[]) {
     //debug 数乘
     //sparse->multi(100);
     //sparse->show();
-    sparse->show('A');
+    //sparse->show('A');
     //multi(sparse, sparse)->show();
     
-    multi(sparse, sparse)->show('B');
+    //multi(sparse, sparse)->show('B');
+    
+    
+    sparseVector* sV=new sparseVector(COL);
+    sV->init();
+    
     return 0;
 }

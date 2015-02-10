@@ -13,6 +13,7 @@
 #include <fstream>
 #include "tmpSparse.h"
 #include<thread>
+#include"sparseVector.h"
 
 #define THREADCOUNT 4//线程数
 
