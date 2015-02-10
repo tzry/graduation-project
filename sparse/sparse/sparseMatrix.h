@@ -14,7 +14,7 @@
 #include "tmpSparse.h"
 #include<thread>
 
-#define THREADCOUNT 3//线程数
+#define THREADCOUNT 4//线程数
 
 
 
@@ -265,7 +265,7 @@ public:
     {
         for (int i = 0; i < n_row; ++i)
             for (int j = row[i]; j < row[i + 1]; ++j)
-                log("/Users/tzry/Desktop/sparse/output.txt",key,i+1,col[j]+1,ele[j]);
+                log("/Users/tzry/Documents/graduation-project/sparse/output.txt",key,i+1,col[j]+1,ele[j]);
         return;
     }
 };
@@ -274,72 +274,37 @@ public:
 
 //线程工作函数
  void workFun(sparseMatrix* a,sparseMatrix* b,tmpSparse* result,int choice){
-    while(choice<a->getRow()){
-        int mR=choice;
-        std::cout<<choice<<std::endl;
-        if(mR<a->getRow()){
-            //正常
-            double r[b->getCol()];
-            double orin[a->getCol()];
-            for(int i=0;i<b->getCol();i++){
-                r[i]=0;
-            }
-            for(int i=0;i<a->getCol();i++){
-                orin[i]=0;
-            }
-            
-            for(int i=a->row.at(mR);i<a->row.at(mR+1);i++){//每一个a中符合要求的行
-                if(a->col.at(i)==-1||a->ele.at(i)==0){//结束标志
-                    break;
-                }
-                orin[a->col.at(i)]=a->ele.at(i);
-            }
-            
-            //for(int i=0;i<a->getCol();i++){
-            //    std::cout<<orin[i];
-            //}
-            //std::cout<<std::endl;
-            
-            for(int bRowI=0;bRowI<b->getRow();bRowI++){//遍历b的每一行
-                
-                for(int bNowIndex=b->row.at(bRowI);bNowIndex<b->row.at(bRowI+1);bNowIndex++){
-                    //b->col[bNowIndex] 列号
-                    //b->ele[bNowIndex] 元素
-                    
-                    if(b->col.at(bNowIndex)==-1||b->ele.at(bNowIndex)==0){//已到该行有效结尾
-                        break;
-                    }
-                    
-                    double x1=orin[bNowIndex];
-                    double x2=b->ele.at(bNowIndex);
-                    
-                    double xx=orin[bNowIndex]*b->ele.at(bNowIndex);
-                    r[b->col.at(bNowIndex)]+=(orin[bNowIndex]*(b->ele.at(bNowIndex)));
-                }
-                
-            }
-            
-            //for(int i=0;i<b->getCol();i++){
-            //    std::cout<<r[i];
-            //}
-            
-            
-            for(int i=0;i<b->getCol();i++){
-                if(r[i]!=0){
-                    result->setEle(mR, i, r[i]);
-                }
-            }
-            
-            
-        }
-        else{
-            //已结束
-            break;
-        }
-        choice+=THREADCOUNT;
-    }
-     
-     
+     while(choice<a->getRow()){
+         //choice为当前A行数
+         
+         if(choice==a->getRow()-1){
+             int xxx=0;
+         }
+         
+         double orin[a->getCol()];
+         double r[b->getCol()];
+         for(int i=0;i<a->getRow();i++)
+             orin[i]=0;
+         for(int i=0;i<b->getCol();i++)
+             r[i]=0;
+         
+         for(int i=a->row.at(choice);i<a->row.at(choice+1)&&a->col.at(i)!=-1&&a->ele.at(i)!=0;i++){
+             orin[a->col.at(i)]=a->ele.at(i);
+         }
+         
+         for(int row=0;row<b->getRow();row++){
+             for(int colIndex=b->row[row];b->col[colIndex]!=-1&&colIndex<b->row[row+1];colIndex++){
+                 r[b->col[colIndex]]=r[b->col[colIndex]]+orin[row]*b->ele[colIndex];
+             }
+         }
+         
+         for(int i=0;i<b->getCol();i++){
+             if(r[i]!=0)
+                 result->setEle(choice, i, r[i]);
+         }
+         
+         choice+=THREADCOUNT;
+     }
      
 }
 

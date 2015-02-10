@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>770DF76F-D7AA-4E2A-BA1F-46AF76A96436</string>
+	<key>IDESourceControlProjectName</key>
+	<string>sparse</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5EB3A32913FFFEF71E0717F0F2875042183886CC</key>
+		<string>https://github.com/tzry/graduation-project.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>sparse/sparse.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5EB3A32913FFFEF71E0717F0F2875042183886CC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tzry/graduation-project.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5EB3A32913FFFEF71E0717F0F2875042183886CC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5EB3A32913FFFEF71E0717F0F2875042183886CC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>graduation-project</string>
+		</dict>
+	</array>
+</dict>
+</plist>
