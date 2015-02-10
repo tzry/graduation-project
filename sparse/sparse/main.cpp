@@ -9,6 +9,7 @@
 #include <iostream>
 #include "sparseMatrix.h"
 #include<stdlib.h>
+#include "complexSparseMatrix.h"
 
 #define ROW 100 //行数
 #define COL 100 //列数
@@ -33,10 +34,14 @@ int main(int argc, const char * argv[]) {
     
     //multi(sparse, sparse)->show('B');
     
+    //debug 矩阵向量乘法
+    //sparseVector* sV=new sparseVector(COL);
+    //sV->init();
+    //multi(sparse, sV);
     
-    sparseVector* sV=new sparseVector(COL);
-    sV->init();
-    multi(sparse, sV);
+    
+        
+    
     
     return 0;
 }

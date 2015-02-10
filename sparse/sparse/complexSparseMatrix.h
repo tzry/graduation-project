@@ -1,26 +1,29 @@
 //
-//  sparseMatrix.h
+//  complexSparseMatrix.h
 //  sparse
 //
-//  Created by tzry on 15/2/7.
+//  Created by tzry on 15/2/10.
 //  Copyright (c) 2015年 tzry. All rights reserved.
 //
 
-#ifndef sparseMatrix_h
-#define sparseMatrix_h
+#ifndef sparse_complexSparseMatrix_h
+#define sparse_complexSparseMatrix_h
+
 #include <vector>
+#include "complexNumber.h"
 #include <iostream>
 #include <fstream>
 #include "tmpSparse.h"
 #include<thread>
 #include"sparseVector.h"
+#include "tmpComplexSparse.h"
 
 #define THREADCOUNT 4//线程数
 
 
 
 
-class sparseMatrix
+class complexSparseMatrix
 {
 private:
     int n_col;		/**< number of the columns. */
@@ -34,7 +37,7 @@ public:
     
     int missionRow=0;
     
-    std::vector<double> ele; /**< the array to story the values of the elements. */
+    std::vector<complexNumber> ele; /**< the array to story the values of the elements. */
     std::vector<int> col;	/**< the column  index of the non-zero elements. */
     std::vector<int> row;	/**< the row index of the non-zero elements. */
     
@@ -51,7 +54,7 @@ public:
     
     
     //构造函数
-    sparseMatrix(int _n_row, int _n_col){
+    complexSparseMatrix(int _n_row, int _n_col){
         n_col = _n_col;
         n_row = _n_row;
     }
@@ -63,7 +66,7 @@ public:
      * @param _n_col the init. value of the nubmer of the columns.
      * @param _n_couple the max number of the non-zero elements in each rows.
      */
-    sparseMatrix(int _n_row, int _n_col, int _n_couple)
+    complexSparseMatrix(int _n_row, int _n_col, int _n_couple)
     {
         n_col = _n_col;
         n_row = _n_row;
@@ -88,7 +91,7 @@ public:
      */
     //rewritten by tzry
     //fix some bugs on special issues
-    int set_ele(int _i, int _j, double _ele)
+    int set_ele(int _i, int _j, complexNumber _ele)
     {
         int i;bool flag=false;
         /**
@@ -113,7 +116,7 @@ public:
                 flag=true;
                 break;
             }
-            else if(ele[i]==0){//初始的对角数据
+            else if(ele[i].realPart==0&&ele[i].imaginaryPart==0){//初始的对角数据
                 col[i]=_j;
                 ele[i]=_ele;
                 flag=true;
@@ -135,12 +138,13 @@ public:
      *
      * @return the element value.
      */
-    double get_ele(int _i, int _j)
+    complexNumber get_ele(int _i, int _j)
     {
         for (int j = row[_i]; j < row[_i+1]; ++j)
             if (col[j] == _j)
                 return ele[j];
-        return 0;
+        complexNumber cN(0,0);
+        return cN;
     };
     
     
@@ -153,11 +157,11 @@ public:
     {
         for (int i = 0; i < n_row; ++i)
             for (int j = row[i]; j < row[i + 1]; ++j)
-                std::cout << "(" << i << ", " << col[j] << ")=" << ele[j] << std::endl;
+                std::cout << "(" << i << ", " << col[j] << ")=" << ele[j].toString() << std::endl;
         return;
     };
     
-    
+    /*
     int gs_step(std::vector<double> &_b, std::vector<double> &_u)
     {
         for (int i = 0; i < n_row; ++i)
@@ -169,7 +173,7 @@ public:
         }
         return 0;
     };
-    
+    */
     
     /**
      * Compress the empty non-zero elements. Just renumber the
@@ -224,7 +228,8 @@ public:
         for(int i=0;i<n_row;i++){
             for(int j=0;j<n_col;j++){
                 if(rand()*1.0/MAX<noZeroPercent){
-                    this->set_ele(i, j, (float)(rand()*1.0/MAX));
+                    complexNumber cN((float)(rand()*1.0/MAX),(float)(rand()*1.0/MAX));
+                    this->set_ele(i, j, cN);
                 }
             }
         }
@@ -233,9 +238,10 @@ public:
     
     //数乘
     void multi(double times){
-        std::vector<double>::iterator it;
+        std::vector<complexNumber>::iterator it;
         for(it=this->ele.begin();it!=this->ele.end();it++){
-            (*it)*=times;
+            (*it).realPart*=times;
+            (*it).imaginaryPart*=times;
         }
     }
     
@@ -258,7 +264,7 @@ public:
     }
     
     //测试文件输出
-    void log(char* filename,char key,int row,int col,double value){
+    void log(char* filename,char key,int row,int col,char* value){
         std::ofstream fout(filename,std::ios::app);
         fout<<key<<"("<<row<<","<<col<<")="<<value<<";"<<std::endl;
     }
@@ -266,7 +272,7 @@ public:
     {
         for (int i = 0; i < n_row; ++i)
             for (int j = row[i]; j < row[i + 1]; ++j)
-                log("/Users/tzry/Documents/graduation-project/sparse/output.txt",key,i+1,col[j]+1,ele[j]);
+                log("/Users/tzry/Documents/graduation-project/sparse/output.txt",key,i+1,col[j]+1,ele[j].toString());
         return;
     }
 };
@@ -274,35 +280,47 @@ public:
 
 
 //线程工作函数
- void workFun(sparseMatrix* a,sparseMatrix* b,tmpSparse* result,int choice){
-     while(choice<a->getRow()){
-         //choice为当前A行数
-         
-         double orin[a->getCol()];
-         double r[b->getCol()];
-         for(int i=0;i<a->getCol();i++)
-             orin[i]=0;
-         for(int i=0;i<b->getCol();i++)
-             r[i]=0;
-         
-         for(int i=a->row.at(choice);i<a->row.at(choice+1)&&a->col.at(i)!=-1&&a->ele.at(i)!=0;i++){
-             orin[a->col.at(i)]=a->ele.at(i);
-         }
-         
-         for(int row=0;row<b->getRow();row++){
-             for(int colIndex=b->row[row];b->col[colIndex]!=-1&&colIndex<b->row[row+1];colIndex++){
-                 r[b->col[colIndex]]=r[b->col[colIndex]]+orin[row]*b->ele[colIndex];
-             }
-         }
-         
-         for(int i=0;i<b->getCol();i++){
-             if(r[i]!=0)
-                 result->setEle(choice, i, r[i]);
-         }
-         
-         choice+=THREADCOUNT;
-     }
-     
+void workFunc(complexSparseMatrix* a,complexSparseMatrix* b,tmpComplexSparse* result,int choice){
+    while(choice<a->getRow()){
+        //choice为当前A行数
+        
+        complexNumber *orin;
+        complexNumber *r;
+        
+        orin=(complexNumber*)malloc(sizeof(complexNumber)*a->getCol());
+        r=(complexNumber*)malloc(sizeof(complexNumber)*b->getCol());
+        
+        for(int i=0;i<a->getCol();i++){
+            orin[i].realPart=0;
+            orin[i].imaginaryPart=0;
+        }
+        for(int i=0;i<b->getCol();i++){
+            r[i].realPart=0;
+            r[i].imaginaryPart=0;
+        }
+        
+        for(int i=a->row.at(choice);i<a->row.at(choice+1)&&a->col.at(i)!=-1&&a->ele.at(i).realPart!=0&&a->ele.at(i).imaginaryPart!=0;i++){
+            orin[a->col.at(i)].realPart=a->ele.at(i).realPart;
+            orin[a->col.at(i)].imaginaryPart=a->ele.at(i).imaginaryPart;
+        }
+        
+        for(int row=0;row<b->getRow();row++){
+            for(int colIndex=b->row[row];b->col[colIndex]!=-1&&colIndex<b->row[row+1];colIndex++){
+                //r[b->col[colIndex]]=r[b->col[colIndex]]+orin[row]*b->ele[colIndex];
+                complexNumber t=*(orin+row)*b->ele[colIndex];
+                (*(r+b->col[colIndex])).realPart+=t.realPart;
+                (*(r+b->col[colIndex])).imaginaryPart+=t.imaginaryPart;
+            }
+        }
+        
+        for(int i=0;i<b->getCol();i++){
+            if(r[i].realPart!=0||r[i].imaginaryPart!=0)
+                result->setEle(choice, i, *(r+i));
+        }
+        
+        choice+=THREADCOUNT;
+    }
+    
 }
 
 
@@ -310,15 +328,16 @@ public:
 
 
 //格式转换
-sparseMatrix* sparse(tmpSparse* tps){
+complexSparseMatrix* sparse(tmpComplexSparse* tps){
     int index=0;
     int couple=0;
-    sparseMatrix* result=new sparseMatrix(tps->getRow(),tps->getCol());
+    complexSparseMatrix* result=new complexSparseMatrix(tps->getRow(),tps->getCol());
     for(int i=0;i<tps->getRow();i++){
         //每一行
         if(tps->col[i].size()==0){
             //无ele
-            result->ele.push_back(0);
+            complexNumber cN(0,0);
+            result->ele.push_back(cN);
             if(i<=tps->getCol())
                 result->col.push_back(i);
             else
@@ -342,19 +361,19 @@ sparseMatrix* sparse(tmpSparse* tps){
 
 //稀疏矩阵乘法
 //认为阶数是正常的
-sparseMatrix* multi(sparseMatrix* a,sparseMatrix* b){
+complexSparseMatrix* multi(complexSparseMatrix* a,complexSparseMatrix* b){
     a->missionRow=0;
     if(a->getCol()!=b->getRow()){
         throw "cannot be multied";
     }
     
-    tmpSparse* result=new tmpSparse(a->getRow(),b->getCol(),a->getCouple()>b->getCouple()?a->getCouple():b->getCouple());
+    tmpComplexSparse* result=new tmpComplexSparse(a->getRow(),b->getCol(),a->getCouple()>b->getCouple()?a->getCouple():b->getCouple());
     
     std::thread threads[THREADCOUNT];
     for(int i=0;i<THREADCOUNT;i++){
-        threads[i]=std::thread(workFun,a,b,result,i);
-        
+        threads[i]=std::thread(workFunc,a,b,result,i);
     }
+    
     for(int i=0;i<THREADCOUNT;i++)
     {
         (threads[i]).join();
@@ -364,9 +383,9 @@ sparseMatrix* multi(sparseMatrix* a,sparseMatrix* b){
 
 
 
-
+/*
 //向量乘法线程工作函数
-void sparseVectorWorkFun(sparseMatrix* sM,sparseVector* sV,sparseVector* result,int row){
+void sparseVectorWorkFun(complexSparseMatrix* sM,complexSparseVector* sV,complexSparseVector* result,int row){
     while(row<sV->getLength()){
         
         for(int i=sM->row.at(row);i<sM->row.at(row+1)&&sM->col.at(i)!=-1&&sM->ele.at(i)!=0;i++){
@@ -396,6 +415,6 @@ sparseVector* multi(sparseMatrix* sM,sparseVector* sV){
     }
     return result;
 }
-
+ */
 
 #endif
