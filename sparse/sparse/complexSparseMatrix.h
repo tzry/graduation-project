@@ -13,9 +13,8 @@
 #include "complexNumber.h"
 #include <iostream>
 #include <fstream>
-#include "tmpSparse.h"
 #include<thread>
-#include"sparseVector.h"
+#include"complexSparseVector.h"
 #include "tmpComplexSparse.h"
 
 #define THREADCOUNT 4//线程数
@@ -280,7 +279,7 @@ public:
 
 
 //线程工作函数
-void workFunc(complexSparseMatrix* a,complexSparseMatrix* b,tmpComplexSparse* result,int choice){
+void complexWorkFun(complexSparseMatrix* a,complexSparseMatrix* b,tmpComplexSparse* result,int choice){
     while(choice<a->getRow()){
         //choice为当前A行数
         
@@ -371,7 +370,7 @@ complexSparseMatrix* multi(complexSparseMatrix* a,complexSparseMatrix* b){
     
     std::thread threads[THREADCOUNT];
     for(int i=0;i<THREADCOUNT;i++){
-        threads[i]=std::thread(workFunc,a,b,result,i);
+        threads[i]=std::thread(complexWorkFun,a,b,result,i);
     }
     
     for(int i=0;i<THREADCOUNT;i++)
@@ -383,30 +382,32 @@ complexSparseMatrix* multi(complexSparseMatrix* a,complexSparseMatrix* b){
 
 
 
-/*
+
 //向量乘法线程工作函数
-void sparseVectorWorkFun(complexSparseMatrix* sM,complexSparseVector* sV,complexSparseVector* result,int row){
+void complexSparseVectorWorkFun(complexSparseMatrix* sM,complexSparseVector* sV,complexSparseVector* result,int row){
     while(row<sV->getLength()){
         
-        for(int i=sM->row.at(row);i<sM->row.at(row+1)&&sM->col.at(i)!=-1&&sM->ele.at(i)!=0;i++){
-            result->addEle(row, sM->ele.at(i)*sV->getValue(sM->col.at(i)));
+        for(int i=sM->row.at(row);i<sM->row.at(row+1)&&sM->col.at(i)!=-1&&sM->ele.at(i).realPart!=0&&sM->ele.at(i).imaginaryPart!=0;i++){
+            complexNumber t=sM->ele.at(i);
+            complexNumber tt=sV->getValue(sM->col.at(i));
+            result->addEle(row, t*tt);
         }
-        
+    
         row+=THREADCOUNT;
     }
 }
 
 
 //向量乘法
-sparseVector* multi(sparseMatrix* sM,sparseVector* sV){
+complexSparseVector* multi(complexSparseMatrix* sM,complexSparseVector* sV){
     sM->missionRow=0;
     if(sM->getCol()!=sV->getLength()){
         throw "cannot be multied";
     }
-    sparseVector* result=new sparseVector(sM->getCol());
+    complexSparseVector* result=new complexSparseVector(sM->getCol());
     std::thread threads[THREADCOUNT];
     for(int i=0;i<THREADCOUNT;i++){
-        threads[i]=std::thread(sparseVectorWorkFun,sM,sV,result,i);
+        threads[i]=std::thread(complexSparseVectorWorkFun,sM,sV,result,i);
         
     }
     for(int i=0;i<THREADCOUNT;i++)
@@ -415,6 +416,6 @@ sparseVector* multi(sparseMatrix* sM,sparseVector* sV){
     }
     return result;
 }
- */
+
 
 #endif

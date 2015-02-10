@@ -19,12 +19,12 @@
 
 int main(int argc, const char * argv[]) {
     //初始化稀疏矩阵
-    sparseMatrix* sparse=new sparseMatrix(ROW,COL,COUPLE);
-    sparse->init(NONE_ZERO_PERCENT);
-    sparse->compress();
+    //sparseMatrix* sparse=new sparseMatrix(ROW,COL,COUPLE);
+    //sparse->init(NONE_ZERO_PERCENT);
+    //sparse->compress();
     
     //debug 初始输出
-    sparse->show();
+    //sparse->show();
     
     //debug 数乘
     //sparse->multi(100);
@@ -39,9 +39,15 @@ int main(int argc, const char * argv[]) {
     //sV->init();
     //multi(sparse, sV);
     
-    
-        
-    
-    
+    //复数运算
+    //complexSparseMatrix* sparse=new complexSparseMatrix(ROW,COL,COUPLE);
+    //sparse->init(NONE_ZERO_PERCENT);
+    //sparse->compress();
+    //sparse->show();
+    //sparse->multi(100);
+    //multi(sparse, sparse)->show();
+    //complexSparseVector* sV=new complexSparseVector(COL);
+    //sV->init();
+    //multi(sparse,sV)->show();
     return 0;
 }

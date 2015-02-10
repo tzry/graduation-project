@@ -28,6 +28,7 @@
 		78E22D871A8A0C05000C9450 /* complexNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = complexNumber.h; sourceTree = "<group>"; };
 		78E22D881A8A0E04000C9450 /* complexSparseMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = complexSparseMatrix.h; sourceTree = "<group>"; };
 		78E22D891A8A1B81000C9450 /* tmpComplexSparse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tmpComplexSparse.h; sourceTree = "<group>"; };
+		78E22D8A1A8A2014000C9450 /* complexSparseVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = complexSparseVector.h; sourceTree = "<group>"; };
 		78F60EBB1A860F5900D9CE06 /* sparse */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = sparse; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F60EBE1A860F5900D9CE06 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		78F60EC71A865E2000D9CE06 /* sparseMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sparseMatrix.h; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 				78E22D871A8A0C05000C9450 /* complexNumber.h */,
 				78E22D881A8A0E04000C9450 /* complexSparseMatrix.h */,
 				78E22D891A8A1B81000C9450 /* tmpComplexSparse.h */,
+				78E22D8A1A8A2014000C9450 /* complexSparseVector.h */,
 			);
 			path = sparse;
 			sourceTree = "<group>";

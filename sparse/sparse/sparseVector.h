@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 tzry. All rights reserved.
 //
 #include<stdlib.h>
+#include<iostream>
 #ifndef sparse_sparseVector_h
 #define sparse_sparseVector_h
 
@@ -44,7 +45,12 @@ private:
     void addEle(int pos,double value){
         (*(ele+pos))+=value;
     }
-    
+    //呈现
+    void show(){
+        for(int i=0;i<length;i++)
+            std::cout<<*(ele+i)<<',';
+        std::cout<<std::endl;
+    }
 };
 
 #endif
