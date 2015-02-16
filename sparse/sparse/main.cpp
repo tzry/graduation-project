@@ -38,6 +38,8 @@ int main(int argc, const char * argv[]) {
     //sparseVector* sV=new sparseVector(COL);
     //sV->init();
     //multi(sparse, sV);
+
+    
     
     //复数运算
     //complexSparseMatrix* sparse=new complexSparseMatrix(ROW,COL,COUPLE);
