@@ -19,37 +19,37 @@
 
 int main(int argc, const char * argv[]) {
     //初始化稀疏矩阵
-    //sparseMatrix* sparse=new sparseMatrix(ROW,COL,COUPLE);
-    //sparse->init(NONE_ZERO_PERCENT);
-    //sparse->compress();
+    sparseMatrix* sparse=new sparseMatrix(ROW,COL,COUPLE);
+    sparse->init(NONE_ZERO_PERCENT);
+    sparse->compress();
     
     //debug 初始输出
-    //sparse->show();
+    sparse->show();
     
     //debug 数乘
-    //sparse->multi(100);
-    //sparse->show();
-    //sparse->show('A');
-    //multi(sparse, sparse)->show();
+    sparse->multi(100);
+    sparse->show();
+    sparse->show('A');
+    multi(sparse, sparse)->show();
     
     //multi(sparse, sparse)->show('B');
     
     //debug 矩阵向量乘法
-    //sparseVector* sV=new sparseVector(COL);
-    //sV->init();
-    //multi(sparse, sV);
+    sparseVector* sV=new sparseVector(COL);
+    sV->init();
+    multi(sparse, sV);
 
     
     
     //复数运算
-    //complexSparseMatrix* sparse=new complexSparseMatrix(ROW,COL,COUPLE);
-    //sparse->init(NONE_ZERO_PERCENT);
-    //sparse->compress();
-    //sparse->show();
-    //sparse->multi(100);
-    //multi(sparse, sparse)->show();
-    //complexSparseVector* sV=new complexSparseVector(COL);
-    //sV->init();
-    //multi(sparse,sV)->show();
+    complexSparseMatrix* Csparse=new complexSparseMatrix(ROW,COL,COUPLE);
+    Csparse->init(NONE_ZERO_PERCENT);
+    Csparse->compress();
+    Csparse->show();
+    Csparse->multi(100);
+    multi(Csparse, Csparse)->show();
+    complexSparseVector* csV=new complexSparseVector(COL);
+    csV->init();
+    multi(Csparse,csV)->show();
     return 0;
 }
