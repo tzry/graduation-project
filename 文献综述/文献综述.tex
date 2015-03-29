@@ -7,6 +7,14 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
  \usepackage{clrscode}
+\usepackage{listings}
+
+\lstset{language=C++}%这条命令可以让LaTeX排版时将C++键字突出显示
+
+\lstset{breaklines}%这条命令可以让LaTeX自动将长的代码行换行排版
+
+\lstset{extendedchars=false}%这一条命令可以解决代码跨页时，章节标题，页眉等汉字不显示的问题
+
 
 
 
@@ -32,11 +40,82 @@
 
 在这些年的发展中，出现了很多的存储方法，比如：对角线存贮法、对称矩阵的变带宽存贮法、坐标存贮法、Elipack-Itpack存贮法、CSR存贮法、Shermans存贮法、超矩阵存贮法、动态存贮方案等[2]。
 \newline
-如行压缩存储方式(Compressed Row Storage)的原理和实现方式：
-\newline
+如行压缩存储方式(Compressed Row Storage):
+CRS存储可以高效地存取任意一行非零元素，但存取任意一列非零元则需要遍历整个CRS存储结构。相应地，与CRS存储的稀疏矩阵相关的算法要高效的编程实现，算法的计算顺序必须按行来进行。[e]
+下面对应于CRS存储：
+\newline\newline\newline\newline\newline\newline\newline
+
+\includegraphics[scale=0.25]{crs.png}
+我们可以发现，ROWP数组存储的时行非零元的增长量。COLIND则存储的是列索引值，典型的C语言结构实现为\newline
+
+\begin{lstlisting}
+
+struct cr_matrix{ 
+	int *Ri;/*col index*/ 
+	int *Rp;/*length nrow+1*/ 
+	double *Rx; 
+	int Rncol;
+	int Rnrow;
+};
+
+\end{lstlisting}
+
+
 在早期计算机时，串行的算法占到主流，自然，稀疏矩阵的存储方式以及稀疏矩阵的计算都是为了串行算法服务的。但是随着计算机的发展，计算机集群、多核CPU、GPU并行等的出现，让并行算法在计算时间上远远地超越了串行算法，为了更好的适应并行计算中的稀疏矩阵计算，出现了许多新的算法以及存储方式。例如对于非结构化的矩阵，基于CUDA框架下的SCOO形式的SpMV算法比利用基于Cusp库的SCOO具有更高的效率。[y]
 \newline
-而在做稀疏矩阵的计算时，通常都是做一系列的基本运算，如：矩阵转置、矩阵向量乘法、矩阵矩阵乘法、数乘等。为了能得到更好的效率，许多研究者致力于寻找对于这些计算最优的存储结构及计算算法，同时提供了许多类库供科学计算使用，如：Portable, ExtensibleToolkit for Scientific Computation（PETSc）、GNU Scientific Library (GSL)等。
+而在做稀疏矩阵的计算时，通常都是做一系列的基本运算，如：矩阵转置、矩阵向量乘法、矩阵矩阵乘法、数乘等。为了能得到更好的效率，许多研究者致力于寻找对于这些计算最优的存储结构及计算算法，同时提供了许多类库供科学计算使用，如：Portable, ExtensibleToolkit for Scientific Computation（PETSc）、Boost、GNU Scientific Library (GSL)等。\newline
+例如，在Boost-uBLAS中有着稀疏矩阵的模板mapped\_matrix<T, F, A>（元素映射矩阵存储形式）、compressed\_matrix<T, F, IB, IA, TA>（压缩存储格式）、coordinat\_matrix<T, F, IB, IA, TA>（坐标存储格式）。
+分别有着如下示例：[h]\newline
+\textbf{mapped\_matrix:}
+\begin{lstlisting}
+
+#include <boost/numeric/ublas/matrix_sparse.hpp>
+#include <boost/numeric/ublas/io.hpp>
+
+int main () {
+    using namespace boost::numeric::ublas;
+    mapped_matrix<double> m (3, 3, 3 * 3);
+    for (unsigned i = 0; i < m.size1 (); ++ i)
+        for (unsigned j = 0; j < m.size2 (); ++ j)
+            m (i, j) = 3 * i + j;
+    std::cout << m << std::endl;
+}
+
+\end{lstlisting}
+
+\textbf{compressed\_matrix:}
+\begin{lstlisting}
+
+#include <boost/numeric/ublas/matrix_sparse.hpp>
+#include <boost/numeric/ublas/io.hpp>
+
+int main () {
+    using namespace boost::numeric::ublas;
+    compressed_matrix<double> m (3, 3, 3 * 3);
+    for (unsigned i = 0; i < m.size1 (); ++ i)
+        for (unsigned j = 0; j < m.size2 (); ++ j)
+            m (i, j) = 3 * i + j;
+    std::cout << m << std::endl;
+}
+
+\end{lstlisting}
+
+\textbf{coordinate\_matrix:}
+\begin{lstlisting}
+
+#include <boost/numeric/ublas/matrix_sparse.hpp>
+#include <boost/numeric/ublas/io.hpp>
+
+int main () {
+    using namespace boost::numeric::ublas;
+    coordinate_matrix<double> m (3, 3, 3 * 3);
+    for (unsigned i = 0; i < m.size1 (); ++ i)
+        for (unsigned j = 0; j < m.size2 (); ++ j)
+            m (i, j) = 3 * i + j;
+    std::cout << m << std::endl;
+}
+\end{lstlisting}
+
 在多年的研究中，各种相关的研究成果页层出不穷，例如，
 根据Michele Martone的研究成果，在对称矩阵乘法，或者转置的矩阵向量乘法中，RSB格式的迭代算法效率是比较高的[x]。
 而在李佳佳,张秀霞,谭光明,陈明宇的研究中，得到了影响矩阵性能的参数集，可以利用该参数集提取矩阵特征，并输出最优存储格式，供数值解法器和上层应用调用。[a]
@@ -70,4 +149,6 @@ using atomic operations[J].Parallel Computing, 2013,Vol.39 (11):737-750.\newline
 [b]付朝江.基于贪婪分配的稀疏矩阵与向量乘的负载平衡[J].福建工程学院学报 ,2010年,01期:79-82.\newline
 [d]郑建华，朱 蓉，沈玉利.Sparse matrix multiplication algorithm based on MapＲeduce[J].仲恺农业工程学院学报,2013年,03期:45-50.\newline
 [f]张永杰，孙秦.稀疏矩阵存储技术[J].长春理工大学学报,2006年,03期:38-41.\newline
+ [e]冯广祥. 大型稀疏矩阵直接求解算法的研究及实现[D].  东北大学：系统工程，2010.\newline
+ [h]Joerg Walter and Mathias Koch.Boost 1.57.0 Library Documentation-uBLAS. http://www.boost.org/doc/libs/1\_57\_0/libs/numeric/ublas/doc/index.html， 2011\newline
 \end{document}  
