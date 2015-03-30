@@ -1,0 +1,84 @@
+%!TEX encoding = UTF-8 Unicode  
+\documentclass{article}  
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont=STZhongsong, ItalicFont=STKaiti]{STSong}
+\setCJKsansfont[BoldFont=STHeiti]{STXihei}
+\setCJKmonofont{STFangsong}
+\usepackage{graphicx}
+\usepackage{amsmath}
+ \usepackage{clrscode}
+\usepackage{listings}
+
+\lstset{language=C++}%这条命令可以让LaTeX排版时将C++键字突出显示
+
+\lstset{breaklines}%这条命令可以让LaTeX自动将长的代码行换行排版
+
+\lstset{extendedchars=false}%这一条命令可以解决代码跨页时，章节标题，页眉等汉字不显示的问题
+
+
+
+
+\begin{document}  
+
+\title{开题报告}
+\date{}
+
+\maketitle
+
+
+\textbf{一、问题提出的背景}
+      \qquad
+\newline
+    
+     \textbf{1、背景介绍}
+     \qquad
+      近年来，在工程应用中，求解高阶矩阵的需求日益增长，全矩阵运算脱离了实际的硬件限制，为了满足这一日益增长的需求，同时这些矩阵通常都有着一个特征——非零元远少于零元，稀疏矩阵这门学科便应运而生。
+在 20 世纪 60 年代研发电子网络的电子工程师们是最早的去利用稀疏性来应用稀疏矩阵进行工程上的计算的。[1]
+而在微分方程数值解、线性规划等的有限元分析中，经常出现求解高阶稀疏线性方程组，如利用全矩阵进行存储，则需要$n^2$的空间复杂度和$n^3$的乘法运算时间复杂度，显然，这种程度的运算量是无法被微型计算机，甚至是工作站所接受的。
+而利用矩阵的稀疏性，可以有效地减小消耗很多无谓的存储空间以及无谓的计算，在很大的程度上降低了时间和空间复杂度，降低了计算对硬件的需求，使计算成为可能。
+\newline
+
+ \textbf{2、本研究的意义和目的}
+ 
+ 在实际工程计算中，尤其是在微分方程数值解、线性规划等的有限元分析中，经常出现高阶的矩阵运算，经常出现百万阶、千万阶的矩阵运算，而如果使用全矩阵运算，假设是百万阶的float类型的矩阵，则需要$4*10^{12}B$来存储，也就是4TB的空间，这显然是无法被微型计算机甚至是工作站所接受的。但是通常这些矩阵具有稀疏的性质，拥有着大量的零元，而且通常阶数越高稀疏度越高。这就可以在相当大的程度上减少了存储对于硬件的压力。同时，在计算中，大量对于0的运算是五位的消耗资源的操作，也可以利用稀疏矩阵来避免这些无谓的操作。\newline
+ 
+ \qquad
+\newline
+
+\textbf{二、论文的主要内容和技术路线}
+      \qquad
+\newline
+
+     \textbf{1、主要研究内容}
+     EE
+\newline
+
+
+     \textbf{2、技术路线}
+     EE
+\newline
+
+
+     \textbf{3、可行性分析}
+     EE
+\newline
+
+\textbf{三、研究计划进度安排及预期目标}
+      \qquad
+\newline
+ 
+
+     \textbf{1、进度安排}\qquad \newline
+     2014年11月24日-2014年12月21日，文献收集整理，基础知识学习。\newline2014年12月22日-2015年1月4日，讨论算法模型，确定方案和技术路线。\newline2015年1月5日-2015年1月29日，完成文献综述、开题报告和文献资料翻译。\newline2015年3月9日-2015年4月5日，程序编写、调试。\newline2015年4月6日-2015年5月3日，数值实验和数据收集。\newline2015年5月4日-2015年5月31日，毕业论文撰写。\newline2015年6月1日-2015年6月14日，ppt制作，准备答辩。
+\newline
+
+
+
+     \textbf{2、预期目标}
+     利用c++在g++编译器linux平台下实现稀疏矩阵的行压缩存储方式(Compressed Row Storage)存储。可以并行计算稀疏矩阵的矩阵乘法、数乘等运算。
+\newline
+ 
+ 
+ 
+ 
+\end{document}  
