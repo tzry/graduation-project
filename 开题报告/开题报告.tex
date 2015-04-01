@@ -134,14 +134,16 @@ int main () {
      \textbf{1、主要研究内容} \qquad
 \newline
      
-     在linux平台下，基于g++编译器，编写稀疏矩阵存储的C++库，实现稀疏矩阵的行压缩存储方式(Compressed Row Storage)，同时实现一些稀疏矩阵的基本运算，如矩阵乘法、数乘等，实现多线程计算。
+     在linux平台下，基于g++编译器，编写稀疏矩阵存储的C++库，实现稀疏矩阵的行压缩存储方式(Compressed Row Storage)，同时实现一些稀疏矩阵的基本运算，如矩阵乘法、数乘等。为了更好地发挥CPU性能，需要实现多线程并行计算。
 \newline
 
      \textbf{2、技术路线} \qquad
 \newline
-实现稀疏矩阵的行压缩存储方式(Compressed Row Storage)，利用C++的STL中的vector来存储数据。
+实现稀疏矩阵的行压缩存储方式(Compressed Row Storage)，通过数组存储非零元的增长量、列索引值和非零元值来实现稀疏矩阵的存储。为了实现可变长数组的存储，利用C++的STL中的vector来存储数据。
 \newline
-     利用thread库实现多线程并行计算，更为有效地利用CPU的并行性能。利用mutex互斥锁保障进程安全性，防止出现“脏”数据。
+而为了更好地利用CPU的性能，利用thread库实现多线程并行计算，更为有效地利用CPU的并行性能。而为了防止多线程并行计算中“脏数据”的出现，利用mutex互斥锁保障进程安全性。
+\newline
+为了实现稀疏矩阵的矩阵矩阵乘法和矩阵向量乘法，可以参考全矩阵矩阵矩阵乘法和矩阵向量乘法算法，利用稀疏矩阵的零元不参与计算的特性，按照稀疏矩阵存储的结构，较全矩阵计算省略大量计算，实现稀疏矩阵计算的优势——更为高效的计算。
 \newline
 	
 
@@ -173,7 +175,8 @@ int main () {
 
 
 
-     \textbf{2、预期目标}
+     \textbf{2、预期目标}      \qquad
+\newline
      利用c++在g++编译器linux平台下实现稀疏矩阵的行压缩存储方式(Compressed Row Storage)存储。可以并行计算稀疏矩阵的矩阵乘法、数乘等运算。
 \newline
  
