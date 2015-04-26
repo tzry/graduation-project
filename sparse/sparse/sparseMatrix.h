@@ -15,7 +15,7 @@
 #include<thread>
 #include"sparseVector.h"
 
-#define THREADCOUNT 4//线程数
+#define THREADCOUNT 2//线程数
 
 
 
@@ -260,13 +260,14 @@ public:
     //测试文件输出
     void log(char* filename,char key,int row,int col,double value){
         std::ofstream fout(filename,std::ios::app);
-        fout<<key<<"("<<row<<","<<col<<")="<<value<<";"<<std::endl;
+        //fout<<key<<"("<<row<<","<<col<<")="<<value<<";"<<std::endl;
+        fout<<row<<' '<<col<<' '<<value<<std::endl;
     }
     void show(char key)
     {
         for (int i = 0; i < n_row; ++i)
             for (int j = row[i]; j < row[i + 1]; ++j)
-                log("/Users/tzry/Documents/graduation-project/sparse/output.txt",key,i+1,col[j]+1,ele[j]);
+                log("/Users/tzry/Desktop/graduation-project/sparse/output.txt",key,i+1,col[j]+1,ele[j]);
         return;
     }
 };

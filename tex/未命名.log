@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.3.8)  6 APR 2015 13:20
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.3.8)  10 APR 2015 20:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -934,6 +934,61 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 \savecode=\box46
 \codeboxwidth=\skip58
 \c@thisindent=\count145
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count146
+\calc@Bcount=\count147
+\calc@Adimen=\dimen173
+\calc@Bdimen=\dimen174
+\calc@Askip=\skip59
+\calc@Bskip=\skip60
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count148
+\calc@Cskip=\skip61
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/ppxetex.def
+File: ppxetex.def 2013/08/25 v0.4v Pdfpages driver for XeTeX (AM)
+)
+\AM@pagebox=\box47
+\AM@toc@title=\toks22
+\c@AM@survey=\count149
+\AM@templatesizebox=\box48
 ) (./未命名.aux)
 \openout1 = `未命名.aux'.
 
@@ -953,8 +1008,7 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 13.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 13.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 13.
@@ -1020,6 +1074,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 13.
 LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 13.
+\AtBeginShipoutBox=\box49
 LaTeX Font Info:    Try loading font information for U+lasy on input line 18.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
@@ -1028,254 +1083,385 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 LaTeX Warning: No \author given.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
-
-File: 3_1.png Graphic file (type QTm)
-<use  "3_1.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
+File: saad.pdf Graphic file (type QTm)
+<use  "saad.pdf" >
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf" >
+Underfull \hbox (badness 10000) in paragraph at lines 20--23
 
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 35--37
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page81>
+
+Package pdfpages Warning: Erroneous page width of 0.0pt is corrected.
+
+
+Package pdfpages Warning: Erroneous page height of 0.0pt is corrected.
+
+File: saad.pdf Graphic file (type QTm)
+<use  "saad.pdf"  page81>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page81>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page81>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page81> [2]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page82>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page82>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page82> [3]
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page83>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page83>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page83>
+[4]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page84>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page84>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page84> [5]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page85>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page85>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page85> [6]
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page86>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page86>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page86>
+[7]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page87>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page87>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page87> [8]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page88>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page88>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page88> [9]
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page89>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page89>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page89>
+[10]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page90>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page90>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page90> [11]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page91>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page91>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page91> [12]
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page92>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page92>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page92>
+[13]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page93>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page93>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page93> [14]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page94>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page94>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page94> [15]
+
+Package pdfpages Warning: There's something wrong with the entries
+(pdfpages)                of `addtotoc'. Not all entries were
+(pdfpages)                processed. Check `addtotoc' on input line 23.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+File: 3_1.png Graphic file (type QTm)
+<use  "3_1.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
 File: 3_2.png Graphic file (type QTm)
 <use  "3_2.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 38--42
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--42
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--42
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--42
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--42
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--42
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--42
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
 
 File: 3_3.png Graphic file (type QTm)
 <use  "3_3.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 47--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 65--67
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
 Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text!
-[4]
+[19]
 Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text!
 Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text!
- [5]
-Underfull \hbox (badness 10000) in paragraph at lines 170--173
+ [20]
+Underfull \hbox (badness 10000) in paragraph at lines 179--182
 
  []
 
 File: 3_4_5.png Graphic file (type QTm)
 <use  "3_4_5.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
-[6] [7] (./未命名.aux) ) 
+[21] [22] (./未命名.aux) ) 
 Here is how much of TeX's memory you used:
- 17393 strings out of 493734
- 357618 string characters out of 6146349
- 407818 words of memory out of 5000000
- 20613 multiletter control sequences out of 15000+600000
+ 18791 strings out of 493734
+ 377804 string characters out of 6146349
+ 432365 words of memory out of 5000000
+ 21975 multiletter control sequences out of 15000+600000
  8284 words of font info for 52 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 52i,7n,56p,10445b,195s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,18n,56p,10445b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 未命名.pdf (7 pages).
+Output written on 未命名.pdf (22 pages).

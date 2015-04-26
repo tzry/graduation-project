@@ -11,10 +11,10 @@
 #include<stdlib.h>
 #include "complexSparseMatrix.h"
 
-#define ROW 100 //行数
-#define COL 100 //列数
-#define COUPLE 5    //每行最多非零数
-#define NONE_ZERO_PERCENT 0.03
+#define ROW 10000 //行数
+#define COL 10000 //列数
+#define COUPLE 500   //每行最多非零数
+#define NONE_ZERO_PERCENT 0.01
 
 
 int main(int argc, const char * argv[]) {
@@ -24,24 +24,32 @@ int main(int argc, const char * argv[]) {
     sparse->compress();
     
     //debug 初始输出
-    sparse->show();
+    sparse->show('m');
     
     //debug 数乘
-    sparse->multi(100);
+    /*sparse->multi(100);
     sparse->show();
-    sparse->show('A');
-    multi(sparse, sparse)->show();
+    sparse->show('A');*/
     
-    //multi(sparse, sparse)->show('B');
+    clock_t start,finish;double duration;
+    start=clock();
+    multi(sparse, sparse);
+    finish=clock();
+    duration=1000*(double)(finish-start)/CLOCKS_PER_SEC;
+    std::cout<<duration<<std::endl;
+   /* multi(sparse, sparse)->show();
+    
+    multi(sparse, sparse)->show('B');
     
     //debug 矩阵向量乘法
     sparseVector* sV=new sparseVector(COL);
     sV->init();
-    multi(sparse, sV);
+    multi(sparse, sV);*/
 
     
     
     //复数运算
+    /*
     complexSparseMatrix* Csparse=new complexSparseMatrix(ROW,COL,COUPLE);
     Csparse->init(NONE_ZERO_PERCENT);
     Csparse->compress();
@@ -50,6 +58,6 @@ int main(int argc, const char * argv[]) {
     multi(Csparse, Csparse)->show();
     complexSparseVector* csV=new complexSparseVector(COL);
     csV->init();
-    multi(Csparse,csV)->show();
+    multi(Csparse,csV)->show();*/
     return 0;
 }
