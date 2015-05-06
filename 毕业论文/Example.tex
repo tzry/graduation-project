@@ -1,0 +1,114 @@
+%!TEX encoding = UTF-8 Unicode  
+\documentclass{ZJUthesis}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}   % 调整页边距
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{colortbl}
+\usepackage{amsmath,epsfig,amssymb}
+\usepackage{amsfonts,amssymb}%,pxfonts}%txfonts}%,pxfonts}
+\usepackage{subfig}
+\usepackage{makeidx}  % allows for indexgeneration
+\usepackage{url}
+\usepackage{pst-node}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{booktabs}
+\usepackage{overpic}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{marvosym}  % 画笑脸用的
+
+
+ \usepackage{clrscode}
+\usepackage{listings}
+
+\lstset{language=C++}%这条命令可以让LaTeX排版时将C++键字突出显示
+\usepackage{enumerate}
+
+\lstset{breaklines}%这条命令可以让LaTeX自动将长的代码行换行排版
+
+\lstset{extendedchars=false}%这一条命令可以解决代码跨页时，章节标题，页眉等汉字不显示的问题
+
+
+\begin{document}
+
+
+
+% 章节标题左对齐
+\CTEXsetup[beforeskip={-5ex}, format={\bf\zihao{3}\flushleft}]{chapter}
+\CTEXsetup[beforeskip={-5ex}, format={\bf\zihao{-3}\flushleft}]{section}
+\CTEXsetup[beforeskip={-5ex}, format={\bf\zihao{-3}\flushleft}]{subsection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 封面部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 中文封面内容
+
+  \title{稀疏矩阵存储的C++实现}
+  \author{唐周若愚 \quad 3110104942}
+  \supervisor{王何宇 \quad 副教授}
+  \major{信息与计算科学 \quad 2011级}
+  \institute{数学系}
+
+
+  % 诚信承诺书
+  \classes{信息与计算科学1102}
+  \studentid{3110104942}
+  \signitureyear{2015}
+  \signituremonth{05}
+  \signitureday{15}
+
+  % 封面
+  \maketitle
+
+  % 诚信承诺书
+  \makeenglishtitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 前言部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+
+
+
+
+
+  % 摘要
+  \include{abstract}
+
+  % 目录
+  \tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+  \include{chap-intro}
+  \include{chap-methods}
+
+
+  % 附录
+  \appendix
+  \include{appendix-A}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 附件部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+
+  % 参考文献
+
+  \bibliography{refs}
+
+  % 致谢
+  \include{thanks}
+
+
+\end{document}

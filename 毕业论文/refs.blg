@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: refs.aux
+The style file: unsrt.bst
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: chap-intro.aux
+A level-1 auxiliary file: chap-methods.aux
+A level-1 auxiliary file: appendix-A.aux
+A level-1 auxiliary file: thanks.aux
+Database file #1: refs.bib
+Warning--entry type for "boost_ublas" isn't style-file defined
+--line 12 of file refs.bib
+You've used 4 entries,
+            1791 wiz_defined-function locations,
+            473 strings with 4043 characters,
+and the built_in function-call counts, 614 in all, are:
+= -- 52
+> -- 20
+< -- 0
++ -- 9
+- -- 5
+* -- 22
+:= -- 108
+add.period$ -- 11
+call.type$ -- 4
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 30
+empty$ -- 70
+format.name$ -- 5
+if$ -- 137
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 3
+newline$ -- 22
+num.names$ -- 4
+pop$ -- 14
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 15
+stack$ -- 0
+substring$ -- 15
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 5
+width$ -- 5
+write$ -- 42
+(There was 1 warning)

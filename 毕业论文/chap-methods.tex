@@ -1,0 +1,123 @@
+%!TEX encoding = UTF-8 Unicode  
+\chapter{研究的目标、内容及研究方法}
+\section{研究的目标}
+利用c++语言在linux平台下的g++编译器上编写一个库，实现稀疏矩阵的行压缩存储方式(Compressed Row Storage)存储，并可以实现并行计算稀疏矩阵的矩阵乘法、数乘等运算，可以在实际的科学计算中进行使用。
+ \section{研究内容}
+  在linux平台下，基于g++编译器、C++标准库，编写稀疏矩阵存储的C++库，实现稀疏矩阵的行压缩存储方式(Compressed Row Storage)，同时实现一些稀疏矩阵的基本运算，如矩阵乘法、数乘等。而为了更好地发挥现代多核心CPU的性能，需要实现多线程并行计算，为以后可能进行的集群运算留下可以使用的接口。
+  
+  \section{研究方法}
+  实现稀疏矩阵的行压缩存储方式(Compressed Row Storage)，通过数组存储非零元的增长量、列索引值和非零元值来实现稀疏矩阵的存储。为了实现可变长数组的存储，利用C++的STL中的vector来存储数据。
+  
+  具体实现数据结构如下：
+  \begin{lstlisting}
+
+class sparseMatrix
+{
+private:
+    int n_col;		/**< number of the columns. */
+    int n_row;		/**< number of the rows. */
+    int n_couple;
+public:
+    std::vector<double> ele; /**< the array to story the values of the elements. */
+    std::vector<int> col;	/**< the column  index of the non-zero elements. */
+    std::vector<int> row;	/**< the row index of the non-zero elements. */
+}
+\end{lstlisting}
+
+而为了更好地利用现代多核心CPU的性能，利用thread库实现多线程并行计算，更为有效地利用CPU的并行性能，为未来用于集群计算留下可以使用的接口。而在并行计算中，由于存在多个线程同时操作某一块内存，出现“脏数据”的情况，为了防止多线程并行计算中“脏数据”的出现，利用mutex互斥锁保障进程安全性，将正在运算的内存进行加锁，防止被另一线程同时操作，在操作完成后，进行解锁，供另一线程操作。而在不同的机型上，由于硬件配置、软件配置不一，最优线程数也不一，为了实现更好的利用计算机硬件性能，利用C++的预定义来由程序编写者自行设定线程数。
+\newline
+由于在实际工程中，经常遇到的矩阵操作有矩阵数乘运算、矩阵矩阵乘法、矩阵向量乘法等等，需要实现稀疏矩阵的一些基本运算（矩阵数乘运算、矩阵矩阵乘法、矩阵向量乘法等）。而为了实现稀疏矩阵的矩阵矩阵乘法和矩阵向量乘法，可以参考全矩阵矩阵矩阵乘法和矩阵向量乘法算法，利用稀疏矩阵的零元不参与计算的特性，按照稀疏矩阵存储的结构，较全矩阵计算省略大量计算，实现稀疏矩阵计算的优势——更为高效的计算。
+
+  \chapter{实验结果}
+  在iMac 5k平台上进行测试（3.5 GHz Intel Core i5，8 GB 1600 MHz DDR3），分别测试sparseMatrix和boost-ublas,测试代码如下：
+  
+  \textbf{使用sparseMatrix.h}
+  \begin{lstlisting}
+
+#include <iostream>
+#include "sparseMatrix.h"
+#include<stdlib.h>
+#include "complexSparseMatrix.h"
+
+#define ROW 100000 //行数
+#define COL 100000 //列数
+#define COUPLE 1500   //每行最多非零数
+#define NONE_ZERO_PERCENT 0.01
+
+
+int main(int argc, const char * argv[]) {
+    //初始化稀疏矩阵
+    sparseMatrix* sparse=new sparseMatrix(ROW,COL,COUPLE);
+    sparse->init(NONE_ZERO_PERCENT);
+    sparse->compress();
+  
+    clock_t start,finish;double duration;
+    start=clock();
+    multi(sparse, sparse);
+    finish=clock();
+    duration=1000*(double)(finish-start)/CLOCKS_PER_SEC;
+    std::cout<<duration<<std::endl;
+    
+    multi(sparse, sparse)->show('B');
+    
+    return 0;
+}
+
+
+\end{lstlisting}
+\textbf{使用boost\_ublas}
+\begin{lstlisting}
+  #include <iostream>
+#include<fstream>
+#include "boost/numeric/ublas/matrix_sparse.hpp"
+#include "boost/numeric/ublas/io.hpp"
+using namespace std;
+int main ( ) {
+    using namespace boost::numeric::ublas ;
+    compressed_matrix <double> m ( 10000 , 1000) ;
+    
+    ifstream infile;
+    infile.open("/Users/tzry/Desktop/graduation-project/sparse/output.txt");
+    
+    while (infile.good()&&!infile.eof()) {
+        int i,j;
+        double v;
+        infile>>i>>j>>v;
+        m(i-1,j-1)=v;
+        
+    }
+    
+    
+    clock_t start,finish;double duration;
+    start=clock();
+
+    m=boost::numeric::ublas::prod(m,m);
+    
+    finish=clock();
+    duration=1000*(double)(finish-start)/CLOCKS_PER_SEC;
+    std::cout<<duration<<std::endl;
+
+}
+\end{lstlisting}
+ 测试结果如下：
+
+\begin{tabular}{|c|c|c|c|}
+\hline \multicolumn{4}{|c|}{10000阶稀疏度为0.01的稀疏矩阵的矩阵矩阵乘法}\\
+\hline 单行最大非零元个数&200&500&1000\\
+\hline sparseMatrix&85404.1ms&85129.4ms&87244.9ms\\
+\hline boost$\_$ublas&43823.6ms&330923ms&1.470550e+06ms\\
+\hline
+\end{tabular}
+
+
+
+\chapter{结论}
+根据本文第四部分内容，boost$\_$ublas库的效率在很大程度上取决于输入参数的好坏，而sparseMatrix则效率与输入参数的好坏相关系数很小。虽然在好的参数条件下，boost$\_$ublas的效率更高，但是，sparseMatrix的鲁棒性更好，不容易受到差的输入参数的影响。sparseMatrix在较差的参数条件下与较好地参数条件下，效率基本没有区别。
+\newline
+在实际计算中，遇到不容易知道参数如何选择，或者每行的非零元数量经常变化，且变化较大时，使用sparseMatrix库能有效地提高使用效率。
+
+
+
+
+
+

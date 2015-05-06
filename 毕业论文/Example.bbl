@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}
+
+\bibitem{YousefSaad2003applied}
+Yousef Saad.
+\newblock {\em Iterative Methods for Sparse Linear Systems}.
+\newblock Springer, second edition, 2003.
+
+\bibitem{sparseMatrixTech2006Zhangsun}
+张永杰、孙秦.
+\newblock 稀疏矩阵存储技术.
+\newblock {\em 长春理工大学学报}, 03:38--41, 2006.
+
+\bibitem{fengguangxiang2010.}
+冯广祥.
+\newblock 大型稀疏矩阵直接求解算法的研究及实现.
+\newblock Master's thesis, 东北大学, 2010.
+
+\bibitem{boost_ublas}
+Joerg Walter and Mathias Koch.
+\newblock Boost 1.57.0 library documentation-ublas.
+
+\end{thebibliography}
