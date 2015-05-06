@@ -8,7 +8,7 @@
 \usepackage{amsmath}
  \usepackage{clrscode}
 \usepackage{listings}
-
+\usepackage{pdfpages}
 \lstset{language=C++}%这条命令可以让LaTeX排版时将C++键字突出显示
 
 \lstset{breaklines}%这条命令可以让LaTeX自动将长的代码行换行排版
@@ -20,11 +20,7 @@
 
 \begin{document}  
 
-\title{文献综述}
-\date{}
-
-\maketitle
-
+\includepdf[addtotoc={1,section,1,title in toc,cc},pages=1-2,offset=0cm 0.5cm]{t1.pdf}
 
 \textbf{一、背景介绍}
       \qquad
@@ -152,5 +148,5 @@ using atomic operations[J].Parallel Computing, 2013,Vol.39 (11):737-750.\newline
 [9]付朝江.基于贪婪分配的稀疏矩阵与向量乘的负载平衡[J].福建工程学院学报 ,2010年,01期:79-82.\newline
 [10]张永杰，孙秦.稀疏矩阵存储技术[J].长春理工大学学报,2006年,03期:38-41.\newline
  
-
+\includepdf[addtotoc={1,section,1,title in toc,cc},pages=3-3,offset=0cm 0.5cm]{t1.pdf}
 \end{document}  

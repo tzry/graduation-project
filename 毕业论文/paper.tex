@@ -9,7 +9,7 @@
  \usepackage{clrscode}
 \usepackage{listings}
 \usepackage{enumerate}
-\lstset{language=C++}%这条命令可以让LaTeX排版时将C++键字突出显示
+\lstset{languagev=C++}%这条命令可以让LaTeX排版时将C++键字突出显示
 
 \lstset{breaklines}%这条命令可以让LaTeX自动将长的代码行换行排版
 
@@ -49,6 +49,7 @@
 而在微分方程数值解、线性规划等的有限元分析中，经常出现求解高阶稀疏线性方程组，如利用全矩阵进行存储，则需要$n^2$的空间复杂度和$n^3$的乘法运算时间复杂度，显然，这种程度的运算量是无法被微型计算机，甚至是工作站所接受的。
 而利用矩阵的稀疏性，可以有效地减小消耗很多无谓的存储空间以及无谓的计算，在很大的程度上降低了时间和空间复杂度，降低了计算对硬件的需求，使计算成为可能。
 \newline
+
 \textbf{（1）稀疏矩阵的定义}
       \qquad
 \newline
@@ -56,13 +57,56 @@
 
 \textbf{（2）稀疏矩阵已有存储方式}
       \qquad
-\newline
+\newline 
 在这些年的发展中，出现了很多的存储方法，比如：对角线存贮法、对称矩阵的变带宽存贮法、坐标存贮法、Elipack-Itpack存贮法、CSR存贮法、Shermans存贮法、超矩阵存贮法、动态存贮方案等[2]。
 \newline
-如行压缩存储方式(Compressed Row Storage):
+\textcircled{1}三元组（Triplet）存储：
+顾名思义，三元组存储方法就是分别存储矩阵的非零元所在的行列索引值，以及与之对应的非零元的值的存储方案。[3]
+\newline
+三元组存储方案有着直观、易于实现、顺序无关的特性，但是与传统的存储方法一样，三元组存储方案不便于求解算法的使用，不利于利用矩阵的稀疏性。
+典型的C语言实现为\newline
+\begin{lstlisting}
+
+struct triplet_matrix{ 
+	int *Ti;/*row pointer*/ 
+	int *Tj;/*column pointer*/
+	double *Tx;/*value pointer*/
+	int Tnz;/*number of entries*/
+	int Tnrow;/*number of rows*/
+	int Tncol;/*number of columns*/
+};
+
+\end{lstlisting}
+下面对应于矩阵的三元组存储：
+\newline\newline\newline\newline\newline
+\includegraphics[scale=0.25]{triplet.png}
+
+\textcircled{2}列压缩CSS(Compressed-column storage)存储:
+任何矩阵的运算都涉及到矩阵的存储与读取操作，因此，存取效率对于矩阵运算的效率有着极大的影响。\newline
+许多开源库采用了该存储结构，如UMFPACK、TAUCS等。列压缩存储方案较前面的三元组存储方案较不好理解，但是在矩阵计算中能更为高效地利用矩阵的稀疏性，而这也就是各大求解器采用这一存储方案的原因。[3]
+\newline
+列压缩存储维护了三组数据——（各列非零元的累加值，按递增的顺序存储的每列的非零元的行索引值，对应第二组数据行索引值位置对应的非零元的值）。
+典型的C语言结构实现为\newline
+\begin{lstlisting}
+
+struct cc_matrix{ 
+	int *Ai;/*row index*/ 
+	int *Ap;/*length ncol+1*/
+	double *Ax;
+	
+	int Ancol;
+	int Anrow;
+};
+
+\end{lstlisting}
+下面对应于矩阵的列压缩存储：
+\newline\newline\newline\newline\newline
+\includegraphics[scale=0.25]{ccmatrix.png}
+
+\textcircled{3}行压缩存储方式(Compressed Row Storage):
 CRS存储可以高效地存取任意一行非零元素，但存取任意一列非零元则需要遍历整个CRS存储结构。相应地，与CRS存储的稀疏矩阵相关的算法要高效的编程实现，算法的计算顺序必须按行来进行。[3]
 下面对应于CRS存储：
-\newline\newline\newline\newline\newline\newline\newline
+\newline\newline\newline\newline\newline
 
 \includegraphics[scale=0.25]{crs.png}
 我们可以发现，ROWP数组存储的时行非零元的增长量。COLIND则存储的是列索引值，典型的C语言结构实现为\newline
@@ -78,6 +122,9 @@ struct cr_matrix{
 };
 
 \end{lstlisting}
+
+显然，越是简单的数据结构，存取操作的效率越高，亦即寻址操作的效率越高。例如，传统的稠密矩阵的存储方案只需根据行列索引值即可计算得到数据所在的地址，轻松高效的实现存取操作。在列压缩存储的稀疏矩阵中，显然能高效地存取矩阵的一列，但是，存取行的效率是极为低下的。因此，在矩阵的运算中，我们希望能尽可能地按列进行，而不是按行进行。
+
 
 \textbf{（3）已有的处理稀疏矩阵存储与运算的开源库}
       \qquad
@@ -135,6 +182,22 @@ int main () {
 }
 \end{lstlisting}
 
+\textbf{（4）稀疏矩阵的数乘}
+      \qquad
+\newline
+根据数乘的定义，若矩阵A的=\{$a_{ij}$\}，则kA=\{$ka_{ij}$\}，则稀疏矩阵的数乘可以简单的定义为所有非零元乘上这个数。例如：对(1)实现的三元组存储的稀疏矩阵的数乘可以用如下函数进行计算：
+\begin{lstlisting}
+void multi(triplet_matrix matrix,double k){
+	for(int i=0;i<Tnz;i++){
+		*Tx[i]=*Tx[i]*k;
+	}
+}
+\end{lstlisting}
+
+\textbf{（5）稀疏矩阵的矩阵向量乘法}
+      \qquad
+\newline
+y
 
 
 \textbf{三、研究的目标、内容及研究方法}
@@ -165,18 +228,21 @@ int main () {
 \textbf{四、实验结果}
       \qquad
 \newline
+在iMac 5k平台上进行测试（3.5 GHz Intel Core i5，8 GB 1600 MHz DDR3），测试结果如下：
 
-
-
-
-
-
-
-
+\begin{tabular}{|c|c|c|c|}
+\hline \multicolumn{4}{|c|}{10000阶稀疏度为0.01的稀疏矩阵的矩阵矩阵乘法}\\
+\hline 单行最大非零元个数&200&500&1000\\
+\hline sparseMatrix&85404.1ms&85129.4ms&87244.9ms\\
+\hline boost$\_$ublas&43823.6ms&330923ms&1.470550e+06ms\\
+\hline
+\end{tabular}
 
 \textbf{五、结论}
       \qquad
 \newline
+	根据本文第四部分内容，boost$\_$ublas库的效率在很大程度上取决于输入参数的好坏，而sparseMatrix则效率与输入参数的好坏相关系数很小。虽然在好的参数条件下，boost$\_$ublas的效率更高，但是，sparseMatrix的鲁棒性更好，不容易受到差的输入参数的影响。
+
 
 
 \textbf{参考文献}

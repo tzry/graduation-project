@@ -15,7 +15,7 @@
 #include<thread>
 #include"sparseVector.h"
 
-#define THREADCOUNT 2//线程数
+#define THREADCOUNT 1//线程数
 
 
 

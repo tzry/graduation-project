@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.3.8)  27 APR 2015 00:08
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.3.8)  2 MAY 2015 11:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -964,210 +964,33 @@ Package: listings 2014/03/04 1.5c (Carsten Heinz)
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks23
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/03/04 1.5c listings language file
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/03/04 1.5c listings language file
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
-)
-(/usr/local/texlive/2014/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
-Package: xeCJK-listings 2014/05/13 v3.2.12 xeCJK patch file for listings
-\l__xeCJK_listings_flag_int=\count154
-)
-(./paper.aux)
-\openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 21.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 21.
- (/usr/local/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd
-File: t3cmr.fd 2001/12/31 TIPA font definitions
-)
-LaTeX Font Info:    ... okay on input line 21.
-.................................................
-. fontspec info: "setup-math"
-. 
-. Adjusting the maths setup (use [no-math] to avoid this).
-.................................................
-\symlegacymaths=\mathgroup5
-LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 21.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 21.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 21.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 21.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 21.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 21.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 21.
-LaTeX Font Info:    Redeclaring math accent \check on input line 21.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 21.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 21.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 21.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
-LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 21.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 21.
-LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 21.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 21.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 21.
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 21.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 21.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 21.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 21.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 21.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 21.
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 21.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 21.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 21.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 21.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 21.
-\c@lstlisting=\count155
-LaTeX Font Info:    Try loading font information for U+lasy on input line 26.
+./paper.tex:12: Package keyval Error: languagev undefined.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
+See the keyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \lstset{languagev=C++}
+                           %这条命令可以让LaTeX排版时将C++键字�...
 
-LaTeX Warning: No \author given.
+? 
+./paper.tex:12: Emergency stop.
+ ...                                              
+                                                  
+l.12 \lstset{languagev=C++}
+                           %这条命令可以让LaTeX排版时将C++键字�...
 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-File: crs.png Graphic file (type QTm)
-<use  "crs.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
-
- []
-
-[1
-
-] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 140--148
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--163
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--168
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--172
-
- []
-
-
-Overfull \hbox (16.34001pt too wide) in paragraph at lines 174--181
-\EU1/lmr/m/n/10 http://www.boost.org/doc/libs/1_57_0/libs/numeric/ublas/doc/ind
-ex.html\EU1/STSong(0)/m/n/10 ，| \EU1/lmr/m/n/10 2011 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--181
-
- []
-
-[3] [4] (./paper.aux) ) 
+ 
 Here is how much of TeX's memory you used:
- 18860 strings out of 493734
- 380426 string characters out of 6146349
- 505686 words of memory out of 5000000
- 22061 multiletter control sequences out of 15000+600000
- 8260 words of font info for 49 fonts, out of 8000000 for 9000
+ 18359 strings out of 493734
+ 368646 string characters out of 6146349
+ 403852 words of memory out of 5000000
+ 21613 multiletter control sequences out of 15000+600000
+ 3704 words of font info for 22 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 52i,6n,58p,10447b,843s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on paper.pdf (4 pages).
+ 52i,0n,56p,10447b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

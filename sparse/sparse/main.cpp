@@ -11,9 +11,9 @@
 #include<stdlib.h>
 #include "complexSparseMatrix.h"
 
-#define ROW 10000 //行数
-#define COL 10000 //列数
-#define COUPLE 500   //每行最多非零数
+#define ROW 100000 //行数
+#define COL 100000 //列数
+#define COUPLE 1500   //每行最多非零数
 #define NONE_ZERO_PERCENT 0.01
 
 
