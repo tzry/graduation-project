@@ -399,4 +399,33 @@ sparseVector* multi(sparseMatrix* sM,sparseVector* sV){
 }
 
 
+
+
+
+
+sparseMatrix* add(sparseMatrix* a,sparseMatrix*b){
+    if(a->getRow()!=b->getRow()||a->getCol()!=b->getCol()){
+        throw "can't add";
+    }
+    int couple=a->getCouple()+b->getCouple();
+    sparseMatrix* ret=new sparseMatrix(a->getRow(),a->getCol(),couple);
+    for(int i=1;i<=a->getRow();i++){
+        for(int j=a->row[i-1];j<a->row[i]&&a->ele[j]!=0;j++){
+            ret->set_ele(i-1, a->col[j], a->ele[j]);
+        }
+        for(int j=b->row[i-1];j<b->row[i]&&b->ele[j]!=0;j++){
+            if(ret->get_ele(i-1, b->col[j])==0){
+                ret->set_ele(i-1, b->col[j], b->ele[j]);
+            }
+            else{
+                ret->set_ele(i-1, b->col[j], b->ele[j]+ret->get_ele(i-1, b->col[j]));
+            }
+        }
+    }
+    ret->compress();
+    return ret;
+    
+}
+
+
 #endif
