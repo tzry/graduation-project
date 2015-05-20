@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.3.8)  5 MAY 2015 23:36
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.3.8)  20 MAY 2015 20:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1019,6 +1019,18 @@ Package: listings 2014/03/04 1.5c (Carsten Heinz)
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks24
 )
+(/usr/local/texlive/2014/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box51
+\beforetitleunit=\skip62
+\aftertitleunit=\skip63
+\ttl@plus=\dimen179
+\ttl@minus=\dimen180
+\ttl@toksa=\toks25
+\titlewidth=\dimen181
+\titlewidthlast=\dimen182
+\titlewidthfirst=\dimen183
+)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
@@ -1035,26 +1047,26 @@ Package: xeCJK-listings 2014/05/13 v3.2.12 xeCJK patch file for listings
 (./开题报告.aux)
 \openout1 = `开题报告.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 22.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 23.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 23.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    ... okay on input line 23.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1062,62 +1074,62 @@ LaTeX Font Info:    ... okay on input line 22.
 .................................................
 \symlegacymaths=\mathgroup5
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 22.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 22.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 22.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 22.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 22.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 22.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 22.
-LaTeX Font Info:    Redeclaring math accent \check on input line 22.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 22.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 22.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 22.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 22.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 22.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 23.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 23.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 23.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 23.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 23.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 23.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 23.
+LaTeX Font Info:    Redeclaring math accent \check on input line 23.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 23.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 23.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 23.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 23.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 23.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 22.
+(Font)              `operators' in the math version `normal' on input line 23.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 22.
+(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 23.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 22.
+(Font)              `operators' in the math version `bold' on input line 23.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 22.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 23.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 22.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 22.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 22.
+(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 22.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 22.
+(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 22.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 23.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 22.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 22.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 22.
+(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 22.
+(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 22.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 22.
-\AtBeginShipoutBox=\box51
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 23.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 23.
+\AtBeginShipoutBox=\box52
 \c@lstlisting=\count159
 File: t1.pdf Graphic file (type QTm)
 
@@ -1149,61 +1161,52 @@ File: t1.pdf Graphic file (type QTm)
  <use  "t1.pdf"  page2>
 File: t1.pdf Graphic file (type QTm)
 
-<use  "t1.pdf"  page2> [2]
-Underfull \hbox (badness 10000) in paragraph at lines 27--30
+<use  "t1.pdf"  page2> [2] (./开题报告.toc
+LaTeX Font Info:    Try loading font information for U+lasy on input line 3.
 
- []
-
-LaTeX Font Info:    Try loading font information for U+lasy on input line 35.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 31--38
+))
+\tf@toc=\write3
+\openout3 = `开题报告.toc'.
+
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--42
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 
  []
 
@@ -1213,66 +1216,479 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
-[3]
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
-[4]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 120--126
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--131
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--134
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 136--142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+Underfull \hbox (badness 10000) in paragraph at lines 158--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--146
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 159--162
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--173
+Overfull \hbox (16.34001pt too wide) in paragraph at lines 176--184
+\EU1/lmr/m/n/10 http://www.boost.org/doc/libs/1_57_0/libs/numeric/ublas/doc/ind
+ex.html\EU1/STSong(0)/m/n/10 ，| \EU1/lmr/m/n/10 2011 
+ []
+
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--180
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
 
  []
 
-File: t1.pdf Graphic file (type QTm)
-<use  "t1.pdf" >
-File: t1.pdf Graphic file (type QTm)
- <use  "t1.pdf" >
-Overfull \hbox (16.34001pt too wide) in paragraph at lines 181--192
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
+
+ []
+
+File: crs.png Graphic file (type QTm)
+<use  "crs.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
+
+ []
+
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 274--280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--294
+
+ []
+
+[11]
+Overfull \hbox (16.34001pt too wide) in paragraph at lines 296--309
 \EU1/lmr/m/n/10 http://www.boost.org/doc/libs/1_57_0/libs/numeric/ublas/doc/ind
 ex.html\EU1/STSong(0)/m/n/10 ，| \EU1/lmr/m/n/10 2011 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--192
+Underfull \hbox (badness 10000) in paragraph at lines 296--309
 
  []
 
-[6] [7]
+[12]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf" >
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf" >
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
+
+ []
+
+[13]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page81>
+
+Package pdfpages Warning: Erroneous page width of 0.0pt is corrected.
+
+
+Package pdfpages Warning: Erroneous page height of 0.0pt is corrected.
+
+File: saad.pdf Graphic file (type QTm)
+<use  "saad.pdf"  page81>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page81>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page81>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page81> [14]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page82>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page82>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page82> [15]
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page83>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page83>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page83>
+[16]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page84>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page84>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page84> [17]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page85>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page85>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page85> [18]
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page86>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page86>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page86>
+[19]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page87>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page87>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page87> [20]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page88>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page88>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page88> [21]
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page89>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page89>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page89>
+[22]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page90>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page90>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page90> [23]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page91>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page91>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page91> [24]
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page92>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page92>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page92>
+[25]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page93>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page93>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page93> [26]
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page94>
+File: saad.pdf Graphic file (type QTm)
+
+<use  "saad.pdf"  page94>
+File: saad.pdf Graphic file (type QTm)
+ <use  "saad.pdf"  page94> [27]
+
+Package pdfpages Warning: There's something wrong with the entries
+(pdfpages)                of `addtotoc'. Not all entries were
+(pdfpages)                processed. Check `addtotoc' on input line 318.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
+
+ []
+
+File: 3_1.png Graphic file (type QTm)
+<use  "3_1.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 339--341
+
+ []
+
+File: 3_2.png Graphic file (type QTm)
+<use  "3_2.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
+
+ []
+
+File: 3_3.png Graphic file (type QTm)
+<use  "3_3.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 351--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--363
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 365--367
+
+ []
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 369--371
+
+ []
+
+Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text!
+[31]
+Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text!
+Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text!
+ [32]
+Underfull \hbox (badness 10000) in paragraph at lines 474--477
+
+ []
+
+File: 3_4_5.png Graphic file (type QTm)
+<use  "3_4_5.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+[33]
+File: t1.pdf Graphic file (type QTm)
+ <use  "t1.pdf" >
+File: t1.pdf Graphic file (type QTm)
+ <use  "t1.pdf" > [34]
 File: t1.pdf Graphic file (type QTm)
  <use  "t1.pdf"  page3>
 
@@ -1289,20 +1705,20 @@ File: t1.pdf Graphic file (type QTm)
  <use  "t1.pdf"  page3>
 File: t1.pdf Graphic file (type QTm)
 
-<use  "t1.pdf"  page3> [8]
+<use  "t1.pdf"  page3> [35]
 
 Package pdfpages Warning: There's something wrong with the entries
 (pdfpages)                of `addtotoc'. Not all entries were
-(pdfpages)                processed. Check `addtotoc' on input line 192.
+(pdfpages)                processed. Check `addtotoc' on input line 496.
 
 (./开题报告.aux) ) 
 Here is how much of TeX's memory you used:
- 20200 strings out of 493734
- 398992 string characters out of 6146349
- 539211 words of memory out of 5000000
- 23386 multiletter control sequences out of 15000+600000
- 4492 words of font info for 29 fonts, out of 8000000 for 9000
+ 20512 strings out of 493734
+ 403515 string characters out of 6146349
+ 551633 words of memory out of 5000000
+ 23680 multiletter control sequences out of 15000+600000
+ 4524 words of font info for 33 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 52i,18n,58p,10446b,853s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,18n,58p,10446b,843s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 开题报告.pdf (8 pages).
+Output written on 开题报告.pdf (35 pages).

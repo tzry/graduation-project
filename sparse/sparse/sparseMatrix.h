@@ -270,6 +270,15 @@ public:
                 log("/Users/tzry/Desktop/graduation-project/sparse/output.txt",key,i+1,col[j]+1,ele[j]);
         return;
     }
+    
+    
+    
+    
+    void E(){
+        for(int i=0;i<this->getRow();i++){
+            this->set_ele(i, i, 1);
+        }
+    }
 };
 
 
