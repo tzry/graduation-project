@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.3.8)  20 MAY 2015 20:22
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.3.8)  22 MAY 2015 19:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1970,9 +1970,32 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
  [2
 
 ]
+File: tt.pdf Graphic file (type QTm)
+ <use  "tt.pdf" >
+File: tt.pdf Graphic file (type QTm)
+ <use  "tt.pdf" >
+File: tt.pdf Graphic file (type QTm)
+ <use  "tt.pdf"  page2>
+File: tt.pdf Graphic file (type QTm)
+
+<use  "tt.pdf"  page2>
+File: tt.pdf Graphic file (type QTm)
+ <use  "tt.pdf"  page2>
+File: tt.pdf Graphic file (type QTm)
+ <use  "tt.pdf"  page2>
+File: tt.pdf Graphic file (type QTm)
+
+<use  "tt.pdf"  page2> [3
+
+]
+
+Package pdfpages Warning: There's something wrong with the entries
+(pdfpages)                of `addtotoc'. Not all entries were
+(pdfpages)                processed. Check `addtotoc' on input line 72.
+
 \openout2 = `abstract.aux'.
 
- (./abstract.tex
+(./abstract.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 14.05pt
@@ -1983,12 +2006,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 14.05pt
 (hyperref)                replaced by space on input line 2.
 
-[1
+[4
 
 
-
-
-]) [2
+]) [5
 
 ]
 
@@ -2001,7 +2022,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 14.05pt
 (hyperref)                replaced by space on input line 86.
 
-(./Example.toc [3
+(./Example.toc [6
 
 
 ])
@@ -2015,13 +2036,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4]
+[7]
 \openout2 = `chap-intro.aux'.
 
  (./chap-intro.tex
 第一章
-[1
-
+[8
 
 
 ]
@@ -2031,7 +2051,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--27
 
  []
 
-[2
+[9
 
 ]
 File: triplet.png Graphic file (type QTm)
@@ -2061,7 +2081,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 57--62
 
  []
@@ -2093,7 +2113,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4]
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 80--83
 
  []
@@ -2140,7 +2160,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5]
+[12]
 File: crs.png Graphic file (type QTm)
  <use  "crs.png" >
 Underfull \hbox (badness 10000) in paragraph at lines 104--107
@@ -2162,21 +2182,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
+[13]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7]
+[14]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8]
+[15]
 Overfull \hbox (23.29456pt too wide) detected at line 258
 [] [] \OT1/cmr/m/n/14.05 = []
  []
@@ -2187,19 +2207,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9])
+[16])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10]
+[17]
 \openout2 = `chap-methods.aux'.
 
  (./chap-methods.tex
 第三章
-[11
+[18
 
 
 
@@ -2210,9 +2230,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12]
+[19]
 第四章
-[13
+[20
 
 ]
 Underfull \vbox (badness 2717) has occurred while \output is active []
@@ -2224,7 +2244,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[21]
 Overfull \hbox (11.23863pt too wide) in paragraph at lines 104--111
 [][] 
  []
@@ -2235,90 +2255,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[22]
 第五章
-) [16
+) [23
 
 ]
 \openout2 = `appendix-A.aux'.
 
  (./appendix-A.tex
 附录\nobreakspace {}A
-[17
+[24
 
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[20]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[22]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2379,6 +2329,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [30]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -2406,6 +2359,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -2413,6 +2369,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -2430,6 +2389,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [36]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -2437,9 +2399,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -2467,9 +2426,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [40]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -2477,9 +2433,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -2497,9 +2450,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [43]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -2587,6 +2537,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -2604,6 +2557,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -2620,22 +2576,85 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56])
+[56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57] (./Example.bbl [58
+[57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[59]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[61]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[62]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[63])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[64] (./Example.bbl
 Underfull \hbox (badness 4595) in paragraph at lines 19--21
 []\EU1/lmr/m/n/14.05 Joerg Walter and Mathias Koch.  Boost 1.57.0 library
  []
 
-) [59
+) [65
+
+
 
 ]
 \openout2 = `thanks.aux'.
@@ -2651,7 +2670,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 14.05pt
 (hyperref)                replaced by space on input line 2.
 
-) [60
+) [66
 
 
 ]
@@ -2670,9 +2689,16 @@ File: tt.pdf Graphic file (type QTm)
  <use  "tt.pdf"  page3>
 File: tt.pdf Graphic file (type QTm)
 
-<use  "tt.pdf"  page3> [61
+<use  "tt.pdf"  page3> [67
 
 ]
+File: tt.pdf Graphic file (type QTm)
+ <use  "tt.pdf"  page4>
+File: tt.pdf Graphic file (type QTm)
+ <use  "tt.pdf"  page4>
+File: tt.pdf Graphic file (type QTm)
+
+<use  "tt.pdf"  page4> [68]
 
 Package pdfpages Warning: There's something wrong with the entries
 (pdfpages)                of `addtotoc'. Not all entries were
@@ -2686,12 +2712,12 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 114.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 114.
  ) 
 Here is how much of TeX's memory you used:
- 39136 strings out of 493734
- 720255 string characters out of 6146349
+ 39145 strings out of 493734
+ 720726 string characters out of 6146349
  913264 words of memory out of 5000000
- 41876 multiletter control sequences out of 15000+600000
+ 41885 multiletter control sequences out of 15000+600000
  20011 words of font info for 108 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  68i,18n,97p,10486b,1270s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Example.pdf (67 pages).
+Output written on Example.pdf (68 pages).
