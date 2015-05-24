@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.3.8)  22 MAY 2015 19:12
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.3.8)  24 MAY 2015 19:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1044,7 +1044,7 @@ File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 Package: xeCJK-listings 2014/05/13 v3.2.12 xeCJK patch file for listings
 \l__xeCJK_listings_flag_int=\count158
 )
-No file 开题报告.aux.
+(./开题报告.aux)
 \openout1 = `开题报告.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -1063,7 +1063,7 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 23.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 23.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 23.
@@ -1132,10 +1132,10 @@ LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 23.
 \AtBeginShipoutBox=\box52
 \c@lstlisting=\count159
 File: t1.pdf Graphic file (type QTm)
- <use  "t1.pdf" >
-File: t1.pdf Graphic file (type QTm)
 
 <use  "t1.pdf" >
+File: t1.pdf Graphic file (type QTm)
+ <use  "t1.pdf" >
 File: t1.pdf Graphic file (type QTm)
  <use  "t1.pdf"  page1>
 
@@ -1710,14 +1710,10 @@ Package pdfpages Warning: There's something wrong with the entries
 (pdfpages)                of `addtotoc'. Not all entries were
 (pdfpages)                processed. Check `addtotoc' on input line 496.
 
-(./开题报告.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(./开题报告.aux) ) 
 Here is how much of TeX's memory you used:
- 20510 strings out of 493734
- 403497 string characters out of 6146349
+ 20512 strings out of 493734
+ 403515 string characters out of 6146349
  551633 words of memory out of 5000000
  23680 multiletter control sequences out of 15000+600000
  4524 words of font info for 33 fonts, out of 8000000 for 9000
